@@ -1,0 +1,11 @@
+[Unit]
+Description=Launching the Elevation Server
+Wants=network.target
+After=network.target
+
+[Service]
+ExecStart=/bin/bash /etc/systemd/system/server/launch_server.sh
+
+[Install]
+WantedBy=multi-user.target
+

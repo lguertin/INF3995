@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".supervisor.supervisor_tabs.SupervisorSettingsTab">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/volumeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/volume_text_margin_top"
+            android:layout_marginBottom="@dimen/simple_margin"
+            android:text="@string/adjust_volume"
+            android:textSize="@dimen/volume_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:id="@+id/volumeBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="@dimen/simple_margin"
+            android:progressDrawable="@drawable/seekbar"
+            android:thumb="@drawable/seek_thumb"
+            app:layout_constraintBottom_toTopOf="@+id/changePasswordButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/volumeTextView"
+            app:layout_constraintVertical_bias="0.032" />
+
+        <ImageButton
+            android:id="@+id/muteButton"
+            android:layout_width="91dp"
+            android:layout_height="72dp"
+            android:layout_marginBottom="130dp"
+            android:background="@drawable/rounded_button"
+
+            android:contentDescription="@string/mute_button_description"
+            android:tint="@color/textColor"
+            app:layout_constraintBottom_toTopOf="@+id/changePasswordButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/volumeBar"
+            app:layout_constraintVertical_bias="0.307"
+            app:srcCompat="@android:drawable/ic_lock_silent_mode" />
+
+        <Button
+            android:id="@+id/changePasswordButton"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="69dp"
+            android:layout_marginBottom="91dp"
+            android:background="@drawable/rounded_button"
+            android:padding="@dimen/button_padding"
+            android:text="@string/change_password"
+            android:textColor="@color/textColor"
+            app:layout_constraintBottom_toTopOf="@+id/logoutButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/logoutButton"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="72dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/logout"
+            android:padding="@dimen/simple_margin"
+            android:text="@string/logout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </LinearLayout>
+</ScrollView>

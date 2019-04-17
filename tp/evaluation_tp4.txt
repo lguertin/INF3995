@@ -1,0 +1,8 @@
+Équipe 3                           Commentaires
+Conformité de la remise      1/1   
+Clarté                       2.75/3	Mauvais nom de paquetage (example).   
+Documentation                -/0    
+Qualité du code              7/7   
+Fonctionnement               8/9   	Pas d'affichage des erreurs.
+Total                       18.75/20    
+

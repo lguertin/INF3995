@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">tp4</string>
+
+    <string name="test_button_change">Change me</string>
+    <string name="button_return">Return</string>
+    <string name="loading_images">loading images</string>
+</resources>

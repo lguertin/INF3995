@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".RequestPageActivity">
+
+    <ImageView
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/loading_images"
+        app:srcCompat="@drawable/loading" />
+    <LinearLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/footerLayout"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+                <WebView
+                    android:id="@+id/webView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:theme="@style/AppTheme"
+                    android:visibility="visible">
+
+                </WebView>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/footerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom='true'
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/return_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryDark"
+                    android:onClick="returnHome"
+                    android:text="@string/button_return"
+                    tools:text="@string/button_return" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>

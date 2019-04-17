@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Thu Jan 17 08:42:33 2019
+# Process ID: 177680
+# Current directory: X:/Bureau/ADV7511-ADAU1761
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent176564 X:\Bureau\ADV7511-ADAU1761\adv7511_zed.xpr
+# Log file: X:/Bureau/ADV7511-ADAU1761/vivado.log
+# Journal file: X:/Bureau/ADV7511-ADAU1761\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project X:/Bureau/ADV7511-ADAU1761/adv7511_zed.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'x:/Bureau/ADV7511-ADAU1761/library'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Logiciels/Xilinx/Vivado/2018.1/data/ip'.
+open_project: Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 928.535 ; gain = 186.973
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 17 08:46:45 2019...

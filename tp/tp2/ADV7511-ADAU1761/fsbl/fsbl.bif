@@ -1,0 +1,7 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]X:\Bureau\ADV7511-ADAU1761\adv7511_zed.sdk\fsbl\Release\fsbl.elf
+	X:\Bureau\ADV7511-ADAU1761\adv7511_zed.sdk\system_top_hw_platform_0\system_top.bit
+	X:\Bureau\u-boot.elf
+}

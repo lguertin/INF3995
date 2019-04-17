@@ -1,0 +1,7 @@
+
+Bienvenue dans l'entrepôt git du Projet dans le cadre du cours INF3995 du l'Équipe #3.
+
+Structure :
+	- projet : contient les fichiers des 3 application : Android, PC et Serveur
+	- suivis : contient les rapport d'avancement que nous avons rendus au cours du projet
+	- tp : contient le code source des premiers tp que nous avons réalisés

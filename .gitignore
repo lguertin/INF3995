@@ -1,0 +1,8 @@
+SDK.log
+webtalk
+.metadata
+RemoteSystemsTempFiles
+**/Debug
+**/Release
+*.o
+android/app/build\.gradle

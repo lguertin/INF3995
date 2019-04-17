@@ -1,0 +1,99 @@
+<resources>
+    <string name="app_name">Yellemon</string>
+    <string name="title_activity_supervisor_main">SupervisorMainActivity</string>
+
+    <!-- Generic Errors -->
+    <string name="server_unreachable_error">Serveur indisponible.</string>
+    <string name="access_denied_error">Accès refusé.</string>
+    <string name="unknow_error_number_format">Erreur: %1$d</string>
+    <string name="wrong_request_error">Mauvaise requête.</string>
+    <string name="user_not_authentified">Utilisateur non authentifié.</string>
+
+    <!-- Activity Menu redirection buttons -->
+    <string name="supervisor">Superviseur</string>
+    <string name="utilisateur">Utilisateur</string>
+    <string name="track_queue_button">File de musiques du café</string>
+
+    <!-- Authentification -->
+    <string name="username">Nom d\'utilisateur</string>
+    <string name="password">Mot de passe</string>
+    <string name="connect">Se connecter</string>
+    <string name="wrong_username_or_password_error">Mauvais nom d\'utilisateur ou mot de passe.</string>
+
+    <!-- Local tracks -->
+    <string name="permissions_rationale_text">Afin d\'accéder aux musiques de l\'appareil, nous devons avoir accès aux fichiers externes de l\'application. S\'il vous plait accepter l\'accès aux fichiers lors de la demande d\'accès aux musiques locales.</string>
+    <string name="confirm">Confirmer</string>
+    <string name="back">Retourner</string>
+    <string name="local_track_id">0</string>
+    <string name="local_track_name">Track name</string>
+    <string name="no_song_selected">Aucune chanson n\'a été sélectionnée.</string>
+    <string name="permissions_needed">Permissions requises</string>
+    <string name="device_track_button">Musiques de l\'appareil</string>
+    <string name="upload_button">Téléverser</string>
+    <string name="track_upload_success">La chanson a bien été téléversé.</string>
+    <string name="track_upload_error">Erreur d\'envoi de la chanson.</string>
+    <string name="track_upload_limit_reached">Limite d\'envoi de chanson atteinte ou chanson trop volumineuse.</string>
+    <string name="track_id3_header_missing">La chanson ne possède pas d\'entête ID3.</string>
+
+    <!-- Track list -->
+    <string name="request_your_music">Jouez votre musique</string>
+
+    <!-- Lyrics -->
+    <string name="lyrics_not_fetchable">Impossible d\'obtenir les paroles de cette chanson.</string>
+    <string name="lyrics_not_found">Aucun lyric trouvé pour cette chanson&#8230;</string>
+
+    <!-- Supervisor tab titles -->
+    <string name="tab_track_list">File de musiques</string>
+    <string name="tab_black_list">Liste noire</string>
+    <string name="tab_settings">Réglages</string>
+
+    <!-- Supervisor track list -->
+    <string name="track_invalid_or_position_invalid">La chanson n\’est pas dans la liste ou ne peut être placée à l\’endroit demandé.</string>
+
+    <!-- Supervisor blacklist -->
+    <string name="user_unblock_error_blacklist">Erreur dans le déblocage de l\'utilisateur.</string>
+    <string name="user_block_success_blacklist">L\'usager a été bloqué.</string>
+    <string name="user_block_error_blacklist">Erreur dans le blocage de l\'utilisateur.</string>
+    <string name="unable_to_load_blacklist">Erreur lors de l\'importation de la liste noire.</string>
+    <string name="unblock_user">Voulez vous débloquer cet utilisateur ?</string>
+    <string name="block_user">Voulez vous bloquer cet utilisateur ?</string>
+    <string name="ip_label">IP : &#160;</string>
+    <string name="ip">Adresse ip</string>
+    <string name="mac_label">MAC : &#160;</string>
+    <string name="mac">Adresse mac</string>
+    <string name="sender_label">Client :  &#160;</string>
+    <string name="sender">Nom du client</string>
+    <string name="block">Bloquer</string>
+    <string name="unblock">Débloquer</string>
+    <string name="unknown">Usager Inconnu</string>
+
+    <!-- Supervisor settings tab -->
+    <string name="adjust_volume">Ajuster le volume</string>
+    <string name="volume_load_error">Le volume n\'a pas pu être modifié.</string>
+    <string name="mute_load_error">La sourdine n\'a pas pu être modifiée.</string>
+    <string name="password_change_error">Votre mot de passe n\'a pas pu être changé.</string>
+    <string name="password_change_sucess">Le mot de passe a été changé.</string>
+    <string name="password_different_from_confirmation">Nouveau mot de passe différent de la confirmation.</string>
+    <string name="change_password">Changer mot de passe</string>
+    <string name="old_password_change_hint">Ancien mot de passe</string>
+    <string name="new_password_change_hint">Nouveau mot de passe</string>
+    <string name="confirm_new_password_change_hint">Confirmer mot de passe</string>
+    <string name="logout">Se deconnecter</string>
+
+    <!-- Images description -->
+    <string name="music_icon_description">icon displayed for each music</string>
+    <string name="supervisor_logo_description">Supervisor Logo</string>
+    <string name="is_playing_desc">Image for current track playing</string>
+    <string name="mute_button_description">Boutton qui permet de mettre en sourdine le son</string>
+    <string name="help_popup_image_description">Image d\'aide en entête aux textes d\'aide</string>
+
+    <!-- Help -->
+    <string name="help_button">Aide</string>
+    <string name="supervisor_double_click_help">&#8226; Cliquez deux fois sur la musique pour bloquer l\'utilisateur qui l\'a proposée.</string>
+    <string name="supervisor_swipe_help">&#8226; Glissez la musique vers la droite pour la supprimer.</string>
+    <string name="supervisor_drag_help">&#8226; Appuyez longuement sur une musique, puis déplacez votre doigt pour changer sa position dans la file.</string>
+    <string name="client_color_help">&#8226; Vos musiques apparaissent en jaune et celles des autres utilisateurs en blanc.</string>
+    <string name="client_current_track_help">&#8226; La première musique de la file est celle qui joue en ce moment.</string>
+    <string name="client_double_click_help">&#8226; Appuyez deux fois rapidement sur une musique pour afficher les paroles.</string>
+    <string name="client_delete_help">&#8226; Glissez une de vos musiques vers la droite pour la supprimer.</string>
+</resources>

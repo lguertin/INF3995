@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/track_list_background">
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.yellemon.view.TrackListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="78dp" />
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:background="#689F38"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/footer_txt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorButton"
+            android:gravity="center"
+            android:onClick="selectClientLocalTracks"
+            android:text="@string/request_your_music"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/button_text_size" />
+    </RelativeLayout>
+
+</RelativeLayout>

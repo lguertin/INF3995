@@ -1,0 +1,201 @@
+*************************************************
+
+PATHS :
+"/usager/identification", 
+"/usager/file/{id: [0-9]*}",
+"/usager/chanson/{id: [0-9]*}", 
+"/usager/chanson/{id: [0-9]*}/{no: [0-9]*}",
+"/superviseur/login", 
+"/superviseur/{usager: .*}/logout", 
+"/superviseur/{usager: .*}/changement_mdp", 
+"/superviseur/{usager: .*}/file",
+"/superviseur/{usager: .*}/chanson/{no: [0-9]*}", 
+"/superviseur/{usager: .*}/position",
+"/superviseur/{usager: .*}/volume", 
+"/superviseur/{usager: .*}/volume/augmenter/{no: [0-9]*}",
+"/superviseur/{usager: .*}/volume/diminuer/{no: [0-9]*}", 
+"/superviseur/{usager: .*}/volume/sourdine/activer",
+"/superviseur/{usager: .*}/volume/sourdine/desactiver",
+"/superviseur/{usager: .*}/bloquer", 
+"/superviseur/{usager: .*}/debloquer",
+"/superviseur/{usager: .*}/listenoire",
+"/admin/login", 
+"/admin/logout", 
+"/admin/changement_mdp", 
+"/admin/statistiques", 
+"/admin/logs",
+"/admin/creationcompte", 
+"/admin/suppressioncompte"
+
+
+*************************************************
+CLIENT : 
+
+- Id :
+curl -w'\n' -v -POST '127.0.0.1:8080/usager/identification' -d '{"ip": "132.207", "MAC": "AC:12", "nom": "Alyssa"}'
+
+- Song queue:
+curl -w'\n' -v -GET '127.0.0.1:8080//usager/file/3'
+
+- Send a song :
+curl -w'\n' -v -XPOST '127.0.0.1:8080/usager/chanson/3'
+curl --data-binary "@toSend.mp3" -w'\n' -v -XPOST '132.207.89.31:80/usager/chanson/1'
+
+- Remove song :
+curl -w'\n' -v -XDELETE '127.0.0.1:8080/usager/chanson/3/7'
+
+*************************************************
+SUP :
+
+- Login :
+curl -w'\n' -v -POST '127.0.0.1:8080/superviseur/login' -d '{"usager": "sacha", "mot_de_passe": "chat"}'
+
+- Logout :
+curl -w'\n' -v -XPOST '127.0.0.1:8080/superviseur/sacha/logout'
+
+- Change psswd :
+curl -w'\n' -v -POST '127.0.0.1:8080/superviseur/sacha/changement_mdp' -d '{"ancien": "avant", "nouveau": "apres"}'
+
+- Get songs queue :
+curl -w'\n' -v -GET '127.0.0.1:8080/superviseur/sacha/file'
+
+- Delete song :
+curl -w'\n' -v -XDELETE '127.0.0.1:8080/superviseur/sacha/chanson/3'
+
+- Change song position :
+curl -w'\n' -v -POST '127.0.0.1:8080/superviseur/sacha/position' -d '{"ancien": 3, "nouveau": 7}'
+
+- Get current volume :
+curl -w'\n' -v -GET '127.0.0.1:8080/superviseur/sacha/volume'
+
+- Increase volume :
+curl -w'\n' -v -XPOST '127.0.0.1:8080/superviseur/sacha/volume/augmenter/25'
+
+- Decrease volume :
+curl -w'\n' -v -XPOST '127.0.0.1:8080/superviseur/sacha/volume/diminuer/78'
+
+- Mute volume :
+curl -w'\n' -v -XPOST '127.0.0.1:8080/superviseur/sacha/volume/sourdine/activer'
+
+- UnMute volume :
+curl -w'\n' -v -XPOST '127.0.0.1:8080/superviseur/sacha/volume/sourdine/desactiver'
+
+- Block user :
+curl -w'\n' -v -XPOST '127.0.0.1:8080/superviseur/sacha/bloquer' -d '{"ip": "132.207.89.38", "MAC": "4B:3E:58:99:79:B2", "nom": "Clyde"}'
+
+- UnBlock user :
+curl -w'\n' -v -XPOST '127.0.0.1:8080/superviseur/bonnie/debloquer' -d '{"MAC": "4B:3E:58:99:79:B2"}'
+
+- Get users blackList :
+curl -w'\n' -v -GET '127.0.0.1:8080/superviseur/sacha/listenoire'
+
+
+*************************************************
+ADMIN :
+
+- Login :
+curl -w'\n' -v -POST '127.0.0.1:8080/admin/login' -d '{"usager": "Elyssa", "mot_de_passe": "chat"}'
+
+- Logout :
+curl -w'\n' -v -XPOST '127.0.0.1:8080/admin/logout'
+
+- Change psswd :
+curl -w'\n' -v -POST '127.0.0.1:8080/admin/changement_mdp' -d '{"ancien": "avant", "nouveau": "apres"}'
+
+- Statistics :
+curl -w'\n' -v -GET '127.0.0.1:8080/admin/statistiques'
+
+- Logs :
+curl -w'\n' -v -POST '127.0.0.1:8080/admin/logs' -d '{"dernier": 4}'
+
+- Create sup account :
+curl -w'\n' -v -POST '127.0.0.1:8080/admin/creationcompte' -d '{"usager": "Jughead", "mot_de_passe": "unicorn"}'
+
+- Delete sup account :
+curl -w'\n' -v -POST '127.0.0.1:8080/admin/suppressioncompte' -d '{"usager": "Mia"}'
+
+- Sup list :
+curl -w'\n' -v -GET '127.0.0.1:8080/admin/listesuperviseurs'
+
+*************************************************
+
+
+
+
+
+**************************************************HTPS*****************************************************
+
+SUP :
+
+- Login :
+curl -k -w'\n' -v -POST 'https://127.0.0.1:443/superviseur/login' -d '{"usager": "sacha", "mot_de_passe": "chat"}'
+
+- Logout :
+curl -k -w'\n' -v -XPOST 'https://127.0.0.1:443/superviseur/sacha/logout'
+
+- Change psswd :
+curl -k -w'\n' -v -POST 'https://127.0.0.1:443/superviseur/sacha/changement_mdp' -d '{"ancien": "avant", "nouveau": "apres"}'
+
+- Get songs queue :
+curl -k -w'\n' -v -XGET 'https://127.0.0.1:443/superviseur/sacha/file'
+
+- Delete song :
+curl -k -w'\n' -v -XDELETE 'https://127.0.0.1:443/superviseur/sacha/chanson/3'
+
+- Change song position :
+curl -k -w'\n' -v -POST 'https://127.0.0.1:443/superviseur/sacha/position' -d '{"ancien": 3, "nouveau": 7}'
+
+- Get current volume :
+curl -k -w'\n' -v -XGET 'https://127.0.0.1:443/superviseur/sacha/volume'
+
+- Increase volume :
+curl -k -w'\n' -v -XPOST 'https://127.0.0.1:443/superviseur/sacha/volume/augmenter/25'
+
+- Decrease volume :
+curl -k -w'\n' -v -XPOST 'https://127.0.0.1:443/superviseur/sacha/volume/diminuer/78'
+
+- Mute volume :
+curl -k -w'\n' -v -XPOST 'https://127.0.0.1:443/superviseur/sacha/volume/sourdine/activer'
+
+- UnMute volume :
+curl -k -w'\n' -v -XPOST 'https://127.0.0.1:443/superviseur/sacha/volume/sourdine/desactiver'
+
+- Block user :
+curl -k -w'\n' -v -XPOST 'https://127.0.0.1:443/superviseur/sacha/bloquer' -d '{"ip": "132.207.89.38", "MAC": "4B:3E:58:99:79:B2", "nom": "Clyde"}'
+
+- UnBlock user :
+curl -k -w'\n' -v -XPOST 'https://127.0.0.1:443/superviseur/bonnie/debloquer' -d '{"MAC": "4B:3E:58:99:79:B2"}'
+
+- Get users blackList :
+curl -k -w'\n' -v -XGET 'https://127.0.0.1:443/superviseur/sacha/listenoire'
+
+
+*************************************************
+ADMIN :
+
+- Login :
+curl -k -w'\n' -v -POST 'https://127.0.0.1:443/admin/login' -d '{"usager": "admin", "mot_de_passe": "mario"}'
+
+- Logout :
+curl -k -w'\n' -v -XPOST 'https://127.0.0.1:443/admin/logout'
+
+- Change psswd :
+curl -k -w'\n' -v -POST 'https://127.0.0.1:443/admin/changement_mdp' -d '{"ancien": "avant", "nouveau": "apres"}'
+
+- Statistics :
+curl -k -w'\n' -v -XGET 'https://127.0.0.1:443/admin/statistiques'
+
+- Logs :
+curl -k -w'\n' -v -POST 'https://127.0.0.1:443/admin/logs' -d '{"dernier": 4}'
+
+- Create sup account :
+curl -k -w'\n' -v -POST 'https://127.0.0.1:443/admin/creationcompte' -d '{"usager": "Jughead", "mot_de_passe": "unicorn"}'
+
+- Delete sup account :
+curl -k -w'\n' -v -POST 'https://127.0.0.1:443/admin/suppressioncompte' -d '{"usager": "Mia"}'
+
+- Sup list :
+curl -k -w'\n' -v -XGET 'https://127.0.0.1:443/admin/listesuperviseurs'
+
+
+
